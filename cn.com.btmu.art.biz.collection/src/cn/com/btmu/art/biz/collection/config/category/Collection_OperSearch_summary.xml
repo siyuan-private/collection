@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="summaryDispatchAction" name="Collection/OperSearch/summary" templateBean="summaryService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.common01biz.base.handler.ComOperationQueryHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.common01biz.base.context.ComQueryContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BillOfCollectionQueryVO" key="searchCriteria">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionQueryByOprDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BillOfCollectionQueryVO" key="rows">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionQueryByOprDataBuilder"></databuilder>
+        </output>
+    </vo>
+</actionCategory>

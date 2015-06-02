@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="detailDispatchAction" name="Collection/CollBooking/genbop" templateBean="detailService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.common02biz.bizhandler.GenBopHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.CollectionCollBookingDetailContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcAccptceOpDtlVO" key="BcAccptceOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcBookOpDtlVO" key="BcBookOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollBookingForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.common02biz.bizvo.GenBopResultVO" key="genBopResult">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.common02biz.bizdatabuilder.GenBopDataBuilder"></databuilder>
+        </output>
+    </vo>
+</actionCategory>

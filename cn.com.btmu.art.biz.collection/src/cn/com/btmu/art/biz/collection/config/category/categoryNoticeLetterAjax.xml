@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="summaryDispatchAction" name="categoryNoticeLetterAjax" templateBean="commonService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.NoticeLetterAjaxHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.NoticeLetterAjaxContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.NoticeLetterAjaxVO" key="key">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterAjaxDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.NoticeLetterAjaxVO" key="result">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterAjaxDataBuilder"></databuilder>
+        </output>
+    </vo>
+</actionCategory>

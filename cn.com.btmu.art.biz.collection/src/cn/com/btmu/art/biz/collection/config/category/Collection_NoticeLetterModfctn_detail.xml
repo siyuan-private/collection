@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="summaryDispatchAction" name="Collection/NoticeLetterModfctn/detail" templateBean="commonService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <action actionBean="summaryDispatchAction" name="query" serviceBean="commonService">
+        <handler class="cn.com.btmu.art.biz.collection.handler.NoticeLetterNoticeLetterAjaxQueryForModifyOrDeleteHandler"></handler>
+        <datacontext class="cn.com.btmu.art.biz.collection.context.NoticeLetterNoticeLetterAjaxContext"></datacontext>
+        <vo class="cn.com.btmu.art.biz.collection.vo.BbNoticeLettInfoVO" key="BbNoticeLettInfoVO">
+            <input>
+                <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterNoticeLetterAjaxForModifyDataBuilder"></databuilder>
+            </input>
+            <output>
+                <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterNoticeLetterAjaxForModifyDataBuilder"></databuilder>
+            </output>
+        </vo>
+        <result name="v_common_service_query_success" page="823004003">
+            <vo key="BbNoticeLettInfoVO"></vo>
+        </result>
+    </action>
+    <action actionBean="summaryDispatchAction" name="modify" serviceBean="commonService">
+        <handler class="cn.com.btmu.art.biz.collection.handler.NoticeLetterNoticeLetterAjaxModifyForModifyHandler"></handler>
+        <datacontext class="cn.com.btmu.art.biz.collection.context.NoticeLetterNoticeLetterAjaxContext"></datacontext>
+        <vo class="cn.com.btmu.art.biz.collection.vo.BbNoticeLettInfoVO" key="BbNoticeLettInfoVO">
+            <input>
+                <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterNoticeLetterAjaxForModifyDataBuilder"></databuilder>
+            </input>
+            <output>
+                <databuilder class="cn.com.btmu.art.biz.collection.databuilder.NoticeLetterNoticeLetterAjaxForModifyDataBuilder"></databuilder>
+            </output>
+        </vo>
+        <result name="v_common_service_modify_success" page="101000001">
+            <vo key="BbNoticeLettInfoVO"></vo>
+        </result>
+    </action>
+</actionCategory>

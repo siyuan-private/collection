@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="summaryDispatchAction" name="ART_ART_0116/report" templateBean="reportService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.Collection0116ReportHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.common01biz.base.context.ComReportQueryContext"></datacontext>
+    <vo class="cn.com.btmu.art.component.report.ReportQueryVO" key="reportVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.common01biz.base.databuilder.ComDetailReportDataBuilder"></databuilder>
+        </input>
+    </vo>
+</actionCategory>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="detailDispatchAction" name="Collection/CollModDoc/genacc" templateBean="detailService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.CollectionCollModDocHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.CollectionCollModDocDetailContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollModDocDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcAccptceOpDtlVO" key="BcAccptceOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollModDocDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BbModChgbkDocInfoVO" key="BbModChgbkDocInfoVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollChgbkForCollModDocDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.common.genaccount.vo.GenAccResultVO" key="result">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.common.genaccount.databuilder.GenAccDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <result name="v_acc_build" page="823002015">
+        <vo key="result"></vo>
+    </result>
+</actionCategory>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlMap >
+	<statement id="cn.com.btmu.art.biz.collection.namingsql.Collection011601" parameterClass="commonj.sdo.DataObject" resultClass="commonj.sdo.DataObject">
+	    SELECT	
+			<!--结算方式信用证	1-->
+			decode(NTLT.STLMT_METH,'1','√','2','','3','','4','') as STLMT_METH_1
+			<!--结算方式托收 2-->
+			,decode(NTLT.STLMT_METH,'1','','2','','3','√','4','') as STLMT_METH_2
+			<!--结算方式其他 3-->
+			,decode(NTLT.STLMT_METH,'1','','2','','3','','4','√') as STLMT_METH_3
+			<!--信用证编号 4-->
+			,NTLT.LC_NO
+			<!--来单币种 5-->
+			,NTLT.DOC_RECVD_CCY
+			<!--来单金额 6-->
+			,NTLT.DOC_RECVD_AMT
+			<!--开证日期 7-->
+			,NTLT.ISSUE_DATE
+			<!--索汇金额币种 8-->
+			,NTLT.CLM_EXCHG_AMT_CCY
+			<!--索汇金额 9-->
+			,NTLT.CLM_EXCHG_AMT
+			<!--期限	10-->
+			,NTLT.TERM
+			<!--到期日期	11-->
+			,NTLT.DUE_DATE
+			<!--来单行名称 12-->
+			,NTLT.DOC_RECVD_BANK_NAME
+			<!--来单行编号 13-->
+			,NTLT.DOC_RECVD_BANK_NO
+			<!--收款人名称 14-->
+			,NTLT.PAYEE_NAME
+			<!--收款行名称及地址 15-->
+			,NTLT.RECVG_BANK_NAME_AND_ADDR
+			<!--付款人名称 16-->
+			,NTLT.PAYER_NAME
+			<!--对公标志 17-->
+			,decode(NTLT.TO_PUB_FLG,'Y','√','N','') as TO_PUB_FLG
+			<!--组织机构代码1	18-->
+			,NTLT.ORG_CODE_1
+			<!--组织机构代码2	19-->
+			,NTLT.ORG_CODE_2
+			<!--对私标志	20-->
+			,decode(NTLT.TO_PRIVT_FLG,'Y','√','N','') as TO_PRIVT_FLG
+			<!--个人身份证 21-->
+			,NTLT.PERSONAL_ID
+			<!--中国居民个人 22-->
+			,decode(NTLT.CN_RESDNT,'Y','√','N','') as CN_RESDNT_Y
+			<!--中国非居民个人	23-->
+			,decode(NTLT.CN_RESDNT,'Y','','N','√') as CN_RESDNT_N
+			<!--提运单/货运单据号 24-->
+			,NTLT.DELVR_FRT_DOC_NO
+			<!--合同号 25-->
+			,NTLT.CONTR_NO
+			<!--发票编号 26-->
+			,NTLT.IVC_NO
+			<!--扣费币种 27-->
+			,NTLT.CHG_CCY
+			<!--扣费金额	28-->
+			,NTLT.CHG_AMT
+			<!--合同币种	29-->
+			,NTLT.CONTR_CCY
+			<!--合同金额	30-->
+			,NTLT.CONTR_AMT
+			<!--Shipped On 31-->
+			,NTLT.SHIPPED_ON
+			<!--Shipped From 32-->
+			,NTLT.SHIPPED_FROM
+			<!--Shipped To 33-->
+			,NTLT.SHIPPED_TO
+			<!--Other Name1	34-->
+			,NTLT.OTHER_NAME_1
+			<!--Other Name2	35-->
+			,NTLT.OTHER_NAME_2
+			<!--Other Name3	36-->
+			,NTLT.OTHER_NAME_3
+			<!--Draft 1st 37-->
+			,NTLT.DRAFT_1ST
+			<!--Inv. 1st 38-->
+			,NTLT.INV_1ST
+			<!--B/L,AWB,C/R1 1st 39-->
+			,NTLT.BL_AWB_CR_11
+			<!--B/L,AWB,C/R2 1st 40-->
+			,NTLT.BL_AWB_CR_21
+			<!--Ins.Pol./Cert. 1st 41-->
+			,NTLT.INSPOL_CERT_1ST
+			<!--P/L 1st	42-->
+			,NTLT.PL_1ST
+			<!--Origin 1st 43-->
+			,NTLT.ORIGIN_1ST
+			<!--Quality 1st	44-->
+			,NTLT.QUALITY_1ST
+			<!--Quantity 1st 45-->
+			,NTLT.QUANTITY_1ST
+			<!--Non-wood 1st 46-->
+			,NTLT.NON_WOOD_1ST
+			<!--Inspect 1st	47-->
+			,NTLT.INSPECT_1ST
+			<!--Cert. 1st 48-->
+			,NTLT.CERT_1ST
+			<!--Other Value1 1st 49-->
+			,NTLT.OTHER_VALUE_1_1ST
+			<!--Other Value2 1st 50-->
+			,NTLT.OTHER_VALUE_2_1ST
+			<!--Other Value3 1st 51-->
+			,NTLT.OTHER_VALUE_3_1ST
+			<!--Draft 2nd 52-->
+			,NTLT.DRAFT_2ND
+			<!--Inv. 2nd 53-->
+			,NTLT.INV_2ND
+			<!--B/L,AWB,C/R1 2nd 54-->
+			,NTLT.BL_AWB_CR_12
+			<!--B/L,AWB,C/R2 2nd 55-->
+			,NTLT.BL_AWB_CR_22
+			<!--Ins.Pol./Cert. 2nd 56-->
+			,NTLT.INSPOL_CERT_2ND
+			<!--P/L 2nd 57-->
+			,NTLT.PL_2ND
+			<!--Origin 2nd 58-->
+			,NTLT.ORIGIN_2ND
+			<!--Quality 2nd	59-->
+			,NTLT.QUALITY_2ND
+			<!--Quantity 2nd 60-->
+			,NTLT.QUANTITY_2ND
+			<!--Non-wood 2nd 61-->
+			,NTLT.NON_WOOD_2ND
+			<!--Inspect 2nd	62-->
+			,NTLT.INSPECT_2ND
+			<!--Cert. 2nd 63-->
+			,NTLT.CERT_2ND
+			<!--Other Value1 2nd 64-->
+			,NTLT.OTHER_VALUE_1_2ND
+			<!--Other Value2 2nd 65-->
+			,NTLT.OTHER_VALUE_2_2ND
+			<!--Other Value3 2nd 66-->
+			,NTLT.OTHER_VALUE_3_2ND
+			<!--Remarks备注 67-->
+			,NTLT.REMARKS_RMRK
+			<!--Late Shipment 晚装船标志 68-->
+			,decode(NTLT.LATE_SHIPMENT_FLG,'Y','√','N','') as LATE_SHIPMENT_FLG
+			<!--Late Presentation晚交单标志 69-->
+			,decode(NTLT.LATE_PRESENTATION_FLG,'Y','√','N','') as LATE_PRESENTATION_FLG
+			<!--L/C Expired 信用证过有效期标志	70-->
+			,decode(NTLT.LC_OVERDUE_FLG,'Y','√','N','') as LC_OVERDUE_FLG
+			<!--Overdrawn by 超金额标志 71-->
+			,decode(NTLT.OVERDRAWN_FLG,'Y','√','N','') as OVERDRAWN_FLG
+			<!--超金额币种 72-->
+			,NTLT.OVERDRAWN_AMT_CCY
+			<!--超金额 73-->
+			,NTLT.OVERDRAWN_AMT
+			<!--Additional Discrepancies 其他 74-->
+			,decode(NTLT.ADD_DISC_OTHER,'Y','√','N','') as ADD_DISC_OTHER
+			<!--其它 75-->
+			,NTLT.OTHER
+			FROM BB_NOTICE_LETT_INFO NTLT WHERE NTLT.NOTICE_LETTER_TYPE = '1'
+			<dynamic>
+				<isNotEmpty prepend="and" property="trasfTKind">
+					NTLT.TRASF_T_KIND = #trasfTKind#
+				</isNotEmpty>
+				<isNotEmpty prepend="and" property="trasfNoPrmryRefNo">
+					NTLT.TRASF_NO_PRMRY_REF_NO = #trasfNoPrmryRefNo#
+				</isNotEmpty>
+				<isNotEmpty prepend="and" property="trasfNoSubRefNo">
+					NTLT.TRASF_NO_SUB_REF_NO = #trasfNoSubRefNo#
+				</isNotEmpty>
+				<isNotEmpty prepend="and" property="branchcode">
+					NTLT.BRANCH_CODE = #branchcode#
+				</isNotEmpty>
+			</dynamic>
+	</statement>
+</sqlMap>
+
+

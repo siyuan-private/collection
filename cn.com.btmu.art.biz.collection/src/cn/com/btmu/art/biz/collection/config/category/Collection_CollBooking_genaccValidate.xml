@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="detailDispatchAction" name="Collection/CollBooking/genaccValidate" templateBean="detailService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.CollectionCollBookingHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.CollectionCollBookingDetailContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcAccptceOpDtlVO" key="BcAccptceOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcBookOpDtlVO" key="BcBookOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollBookingForCollBookingDataBuilder"></databuilder>
+        </input>
+    </vo>
+    <vo class="java.lang.String" key="result">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollGenAccValidateDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <result name="v_acc_build" page="823002008">
+        <vo key="result"></vo>
+    </result>
+</actionCategory>

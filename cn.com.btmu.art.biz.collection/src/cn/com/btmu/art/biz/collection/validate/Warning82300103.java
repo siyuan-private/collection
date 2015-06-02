@@ -1,0 +1,72 @@
+package cn.com.btmu.art.biz.collection.validate;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import cn.com.btmu.art.biz.collection.constant.CollectionConstant;
+import cn.com.btmu.art.biz.collection.context.CollectionCollModDocDetailContext;
+import cn.com.btmu.art.biz.common01biz.base.AbstractBizWarningUnit;
+import cn.com.btmu.art.framework.bo.domain.bcdataset.BcMntnOpDtl;
+import cn.com.btmu.art.framework.exception.ErrMessage;
+
+/**
+ * Warning82300103业务校验
+ * 
+ * @author ivision
+ * @version 1.0.0
+ */
+public class Warning82300103 extends
+    AbstractBizWarningUnit<CollectionCollModDocDetailContext> {
+
+  private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+  /**
+   * 当【画：费用信息.手续费支付方】为‘B：Buyer’时.
+   * 
+   * @return boolean 判断结果
+   * @param data
+   *            数据存储
+   */
+  @Override
+  protected boolean canExecute(CollectionCollModDocDetailContext data) {
+
+    logger.debug("Warning82300103-canExecute start");
+
+    //取得托收维护操作明细取得操作数据
+    BcMntnOpDtl reqData = data.getDataRepository().getOperationDataCollection()
+        .getBcMntnOpDtl();
+    // 当【画：费用信息.手续费支付方】为‘B：Buyer’时.
+    if (CollectionConstant.FEEPAYER_B.equals(reqData.getFeePayer())) {
+
+      logger.debug("Warning82300103-canExecute 【画：费用信息.手续费支付方】为‘B：Buyer’");
+      logger.debug("Warning82300103-canExecute returnValue true");
+      logger.debug("Warning82300103-canExecute end");
+      //返回true
+      return true;
+    }
+
+    logger.debug("Warning82300103-canExecute 【画：费用信息.手续费支付方】不为‘B：Buyer’");
+    logger.debug("Warning82300103-canExecute returnValue false");
+    logger.debug("Warning82300103-canExecute end");
+    // 当【画：费用信息.手续费支付方】不为‘B：Buyer’时.返回false
+    return false;
+  }
+
+  /**
+   * 画面上显示提示message，清算行账户请输入237中间账户
+   * 
+   * @return ErrMessage 错误信息
+   * @param data
+   *            数据存储
+   */
+  @Override
+  protected ErrMessage doCheckLogic(CollectionCollModDocDetailContext data) {
+
+    logger.debug("Warning82300103-doCheckLogic start");
+    logger.debug("Warning82300103-doCheckLogic end");
+
+    // 手续费支付方为“B：Buyer”时，清算行账户请输入237中间账户.
+    return createErrMessage(CollectionConstant.MSG_ID_ART82307_W);
+
+  }
+}

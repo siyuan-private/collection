@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<physicalPage>
+	<!-- 物理画面编号 -->
+	<physicalId>823004</physicalId>
+	
+	<!-- 页面bop上报 选项true/false:默认false -->
+	<plugin value="true"/>
+
+</physicalPage>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="detailDispatchAction" name="Collection/CollModf/detail" templateBean="detailService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.CollectionCollModfHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.CollectionCollModfDetailContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollModfDataBuilder"></databuilder>
+        </input>
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollModfDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlForCompareVO">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollModfForCompareDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcAccptceOpDtlVO" key="BcAccptceOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollModfDataBuilder"></databuilder>
+        </input>
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollModfDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcAccptceOpDtlVO" key="BcAccptceOpDtlForCompareVO">
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollAccptceForCollModfForCompareDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BbModChgbkDocInfoVO" key="BbModChgbkDocInfoVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollChgbkForCollModfDataBuilder"></databuilder>
+        </input>
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollChgbkForCollModfDataBuilder"></databuilder>
+        </output>
+    </vo>
+		<result name="v_detail_new" page="823002018">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_blank" page="101000002">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_inquiry_before" page="823002018">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_checker" page="823002019">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_approver" page="823002020">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_submit_success" page="101000002">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_check_through" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_approval_through" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_save" page="823002018">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_cancel" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_reject" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_detail_close" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_afterwards_adjust_inquiry_before" page="823002018">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+    <result name="v_afterwards_modify_inquiry_before" page="823002018">
+        <vo key="BcMntnOpDtlVO"></vo>
+        <vo key="BcMntnOpDtlForCompareVO"></vo>
+        <vo key="BcAccptceOpDtlVO"></vo>
+        <vo key="BcAccptceOpDtlForCompareVO"></vo>
+        <vo key="BbModChgbkDocInfoVO"></vo>
+    </result>
+</actionCategory>

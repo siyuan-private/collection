@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logicPage>
+	<!-- XmlGenerator生成区域1 - 开始 -->
+	
+    <!--逻辑画面编号-->
+    <logicId>823002013</logicId>
+    <!--物理画面的URL,请用户修改-->
+    <url>page/collection/billOfCollectionDetail823002.jsp</url>
+    <!--记账-->
+    <bookAccount value="true"></bookAccount>
+    <!--操作履历-->
+    <controlRecord value="true"></controlRecord>
+    <!--交易附言-->
+    <dealPostscript value="true"></dealPostscript>
+    <!--只读详情-->
+    <detailReadonly value="false"></detailReadonly>
+    <!--手续费区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <feeControl flag="1"></feeControl>
+    <!--未完区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <pendingControl flag="1"></pendingControl>
+    <!--贷款支付区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <loanPaymentControl flag="3"></loanPaymentControl>
+    <!--ONP区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <onpControl flag="1"></onpControl>
+
+	<!-- XmlGenerator生成区域1 - 结束 -->
+	
+	<buttons>
+		<!-- XmlGenerator生成区域2 - 开始 -->
+		
+        <!--复核-->
+        <button>check</button>
+        <!--驳回-->
+        <button>reject</button>
+
+		<!-- XmlGenerator生成区域2 - 结束 -->
+	</buttons>
+	
+	<!-- 逻辑画面的字段属性配置 
+		readOnly:		是否禁止编辑:	选项true/false:默认true
+		doubleCheck:	是否双检测:		选项true/false:默认false
+		visible:		是否显示:		选项true/false:默认true  
+	-->
+	<fields>
+		<!-- XmlGenerator生成区域3 - 开始-->
+		
+        <!--(1) 交易参号^T-kind-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/tkind"></field>
+        <!--(2) 交易参号^主参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/txnPrmryRefNo"></field>
+        <!--(3) 交易参号^子参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/txnSubRefNo"></field>
+        <!--(4) 登记日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/regDate"></field>
+        <!--(5) 预录入号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/preInputNo"></field>
+        <!--(6) 预录入备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/preInputRmrk"></field>
+        <!--(7) 网银-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/internetFlg"></field>
+        <!--(8) 跨境人民币-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/crsBorderRmbFlg"></field>
+        <!--(9) 信用证项下-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/lcFlg"></field>
+        <!--(10) BPO-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bpoFlg"></field>
+        <!--(11) TSU-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/tsuFlg"></field>
+        <!--(12) P.P. NEGO-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/ppnegoFlg"></field>
+        <!--(13) 电报议付-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/telegNegoFlg"></field>
+        <!--(14) 电报议付销号日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/telegNegoClsDate"></field>
+        <!--(15) 备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/newRmrk"></field>
+        <!--(16) 受益人^客户CIF-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneCif"></field>
+        <!--(17) 受益人^客户名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneName"></field>
+        <!--(18) 受益人账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneAcctCcy"></field>
+        <!--(19) 受益人账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneAcctGl"></field>
+        <!--(20) 受益人账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneAcctSubGl"></field>
+        <!--(21) 受益人账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneAcctNo"></field>
+        <!--(22) 受益人为我行客户-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/beneOurCustFlg"></field>
+        <!--(23) 汇票金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bxCcy"></field>
+        <!--(24) 汇票金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bxAmt"></field>
+        <!--(25) Tenor^种类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/tenorType"></field>
+        <!--(26) Tenor^天数-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/tenorDays"></field>
+        <!--(27) Tenor^日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/tenorDate"></field>
+        <!--(28) 假远期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/fakeForwdFlg"></field>
+        <!--(29) 发票编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/ivcNo"></field>
+        <!--(30) 保税区属性-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bondedAreaAttbt"></field>
+        <!--(31) 保税区-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bondedAreaFlg"></field>
+        <!--(32) 已签署GA/TFA-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/sigdGatfa"></field>
+        <!--(33) 托收日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/collDate"></field>
+        <!--(34) 到期日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dueDate"></field>
+        <!--(35) 提单日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/blDate"></field>
+        <!--(36) 最终到期日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/finalDueDate"></field>
+        <!--(37) 信用证编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/lcNo"></field>
+        <!--(38) 信用证金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/lcAmtCcy"></field>
+        <!--(39) 信用证金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/lcAmt"></field>
+        <!--(40) 信用证余额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/lcBalCcy"></field>
+        <!--(41) 信用证余额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/lcBalAmt"></field>
+        <!--(42) 开证日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/issueDate"></field>
+        <!--(43) 到期日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dueDate"></field>
+        <!--(44) 第二受益人-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/bene2ndFlg"></field>
+        <!--(45) 中转行-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/trastBank"></field>
+        <!--(46) 中转行国别-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/trastBankNatnlty"></field>
+        <!--(47) 进口商名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/imptrName"></field>
+        <!--(48) 进口商国别-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/imptrNatnlty"></field>
+        <!--(49) OSA/NRA-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/osaNraFlg"></field>
+        <!--(50) 寄单行同开证行-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dispchBankEqIssueFlg"></field>
+        <!--(51) 有偿付行-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/withReimbsBankFlg"></field>
+        <!--(52) 允许电报偿付-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/allowTelegReimbsFlg"></field>
+        <!--(53) 开证行^行号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/issueBankCode"></field>
+        <!--(54) 开证行^Swift-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/issueBankSwift"></field>
+        <!--(55) 开证行^名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/issueBankName"></field>
+        <!--(56) 开证行^地址-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/issueBankAddr"></field>
+        <!--(57) 寄单行^行号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dispchDocBankCode"></field>
+        <!--(58) 寄单行^Swift-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dispchDocBankSwift"></field>
+        <!--(59) 寄单行^名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dispchDocBankName"></field>
+        <!--(60) 寄单行^地址-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/dispchDocBankAddr"></field>
+        <!--(61) 偿付行^行号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/reimbBankCode"></field>
+        <!--(62) 偿付行^Swift-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/reimbBankSwift"></field>
+        <!--(63) 偿付行^名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/reimbBankName"></field>
+        <!--(64) 偿付行^地址-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/reimbBankAddr"></field>
+        <!--(65) 我行保兑-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/ourBankConfmdFlg"></field>
+        <!--(66) 保兑号^T-kind-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/confmdTKind"></field>
+        <!--(67) 保兑号^主参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/confmdPrmryRefNo"></field>
+        <!--(68) 保兑号^子参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/confmdSubRefNo"></field>
+        <!--(69) 履行保兑责任-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/perfmConfmDuties"></field>
+        <!--(70) 保兑备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/confmdRmrk"></field>
+        <!--(71) 我行承兑-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/ourBankAccptceFlg"></field>
+        <!--(72) 转让信用证-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/trasfLcFlg"></field>
+        <!--(73) 留行信用证-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/kibLcFlg"></field>
+        <!--(74) 留行日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/kibLcDate"></field>
+        <!--(75) 警报国家-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/alertCountry"></field>
+        <!--(76) 代理行-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/agcBankFlg"></field>
+        <!--(77) 国内信用证-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/domstcLcFlg"></field>
+        <!--(78) Combined LC-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/combinedLcFlg"></field>
+        <!--(79) 其他事项-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/otherItem"></field>
+        <!--(80) Combined LC信息^信用证编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/lcNo"></field>
+        <!--(81) Combined LC信息^信用证金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/lcCcy"></field>
+        <!--(82) Combined LC信息^信用证金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/lcAmt"></field>
+        <!--(83) Combined LC信息^drawn amount^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/drawnCcy"></field>
+        <!--(84) Combined LC信息^drawn amount^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/drawnAmt"></field>
+        <!--(85) Combined LC信息^信用证余额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/lcBalCcy"></field>
+        <!--(86) Combined LC信息^信用证余额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bbCombLcMntnOpDtlVoList[*]/lcBalAmt"></field>
+        <!--(87) 转让第二受益人-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasf2ndBene"></field>
+        <!--(88) 转让编号^T-kind-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasfTKind"></field>
+        <!--(89) 转让编号^主参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasfNoPrmryRefNo"></field>
+        <!--(90) 转让编号^转让号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasfNoSubRefNo"></field>
+        <!--(91) 第一受益人账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene1stAcctCcy"></field>
+        <!--(92) 第一受益人账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene1stAcctGl"></field>
+        <!--(93) 第一受益人账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene1stAcctSubGl"></field>
+        <!--(94) 第一受益人账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene1stAcctNo"></field>
+        <!--(95) 转让金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasfAmtCcy"></field>
+        <!--(96) 转让金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/trasfAmt"></field>
+        <!--(97) 第一受益人承担-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/undtk1stBeneFlg"></field>
+        <!--(98) 第二受益人名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndName"></field>
+        <!--(99) 第二受益人国别^国家-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndNatnlty"></field>
+        <!--(100) 第二受益人国别^省-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndProv"></field>
+        <!--(101) 第二受益人国别^市-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndCity"></field>
+        <!--(102) OSA/NRA-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/expLcMntnOpDtlVO/osaNraFlg"></field>
+        <!--(103) 第二受益人通知行^Swift-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndNoticeBankSwiftCode"></field>
+        <!--(104) 第二受益人通知行^名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bene2ndNoticeBankName"></field>
+        <!--(105) 进口商名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/imptrName"></field>
+        <!--(106) 进口商国别-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/imptrNatnlty"></field>
+        <!--(107) OSA/NRA-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/osaNraFlg"></field>
+        <!--(108) 寄单行^行号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocBankCode"></field>
+        <!--(109) 寄单行^Swift-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocBankSwift"></field>
+        <!--(110) 寄单行^名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocBankName"></field>
+        <!--(111) 寄单行^地址-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocBankAddr"></field>
+        <!--(112) 警报国家-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/alertCountry"></field>
+        <!--(113) 代理行-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/agcBankFlg"></field>
+        <!--(114) 其他事项-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/otherItem"></field>
+        <!--(115) 发票编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/docIvcNo"></field>
+        <!--(116) 跟单票/光票-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/docClean"></field>
+        <!--(117) 交货方式-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/delvrMeth"></field>
+        <!--(118) 有追索权-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/withRcsFlg"></field>
+        <!--(119) CHQ Kind-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chqKind"></field>
+        <!--(120) 拒绝证明-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/refuseCertfct"></field>
+        <!--(121) 清算行信息-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/clrBankInfo"></field>
+        <!--(122) 清算行账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/clrBankAcctCcy"></field>
+        <!--(123) 清算行账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/clrBankAcctGl"></field>
+        <!--(124) 清算行账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/clrBankAcctSubGl"></field>
+        <!--(125) 清算行账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/clrBankAcctNo"></field>
+        <!--(126) BC记账科目^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bcBookAcctGl"></field>
+        <!--(127) BC记账科目^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bcBookAcctSubGl"></field>
+        <!--(128) 国别-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/natnlty"></field>
+        <!--(129) 商品-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/goods"></field>
+        <!--(130) 目的-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/purpose"></field>
+        <!--(131) 备注^备注1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/docRmrk1"></field>
+        <!--(132) 备注^备注2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/docRmrk2"></field>
+        <!--(133) 备注^备注3-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/docRmrk3"></field>
+        <!--(134) WSID^WSID1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bcMntnWsid1"></field>
+        <!--(135) WSID^WSID2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bcMntnWsid2"></field>
+        <!--(136) WSID日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/bcMntnWsidDate"></field>
+        <!--(137) 拒付编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dishnrHistInfoVO/dishnrNo"></field>
+        <!--(138) 拒付日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dishnrHistInfoVO/regDate"></field>
+        <!--(139) 故障编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/faultHistInfoVO/faultNo"></field>
+        <!--(140) 故障日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/faultHistInfoVO/regDate"></field>
+        <!--(141) 手续费支付方-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feePayer"></field>
+        <!--(142) 手续费账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feeAcctCcy"></field>
+        <!--(143) 手续费账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feeAcctGl"></field>
+        <!--(144) 手续费账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feeAcctSubGl"></field>
+        <!--(145) 手续费账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feeAcctNo"></field>
+        <!--(146) N/W区分-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/noWfDist"></field>
+        <!--(147) Exchange信息(手续费)^EX.Method-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/feeExMethod"></field>
+        <!--(148) Exchange信息(手续费)^Quote-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/quote"></field>
+        <!--(149) Exchange信息(手续费)^Cont.No.^No.1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/contNo1"></field>
+        <!--(150) Exchange信息(手续费)^Cont.No.^No.2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/contNo2"></field>
+        <!--(151) Exchange信息(手续费)^Rate-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/rate"></field>
+        <!--(152) Exchange信息(手续费)^M/D-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/md"></field>
+        <!--(153) 承兑登记日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/accptceRegDate"></field>
+        <!--(154) 承兑到期日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/accptceDueDate"></field>
+        <!--(155) 远期索偿日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/forwdClmRmbrsmtDate"></field>
+        <!--(156) 合理-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/resnblFlg"></field>
+        <!--(157) Accepted Flag-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/acceptedFlg"></field>
+        <!--(158) WSID^WSID1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/bcAccptceWsid1"></field>
+        <!--(159) WSID^WSID2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/bcAccptceWsid2"></field>
+        <!--(160) WSID日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/bcAccptceWsidDate"></field>
+        <!--(161) 承兑备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcAccptceOpDtlVO/accptceRmrk"></field>
+        <!--(162) 退改单-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/bbMaintType"></field>
+        <!--(163) 登记日-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/regDate"></field>
+        <!--(164) 原因-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/resn"></field>
+        <!--(165) 备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modChgbkDocRmrk"></field>
+        <!--(158) WSID^WSID1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modChgbkDocWsid1"></field>
+        <!--(159) WSID^WSID2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modChgbkDocWsid2"></field>
+        <!--(160) WSID日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modChgbkDocWsidDate"></field>
+        <!--(166) 项目名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modHisDtlVOList[*]/modfctnItemName"></field>
+        <!--(167) 修改前-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modHisDtlVOList[*]/bfChagContnt"></field>
+        <!--(168) 修改后-->
+        <field readOnly="true" doubleCheck="false" name="data/BbModChgbkDocInfoVO/modHisDtlVOList[*]/modfdContnt"></field>
+        <!--(169) 福费廷-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/forftingFlg"></field>
+        <!--(170) 头寸日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/posDate"></field>
+        <!--(171) 头寸金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/posCcy"></field>
+        <!--(172) 头寸金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/posAmt"></field>
+        <!--(173) 我行对客入账日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/ourBankToCustBookingDate"></field>
+        <!--(174) 进待核查-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/validatnFlg"></field>
+        <!--(175) 待核查账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/validatnAcctCcy"></field>
+        <!--(176) 待核查账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/validatnAcctGl"></field>
+        <!--(177) 待核查账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/validatnAcctSubGl"></field>
+        <!--(178) 待核查账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/validatnAcctNo"></field>
+        <!--(179) 客户等级-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/custLv"></field>
+        <!--(180) 清算行账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/clrBankAcctCcy"></field>
+        <!--(181) 清算行账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/clrBankAcctGl"></field>
+        <!--(182) 清算行账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/clrBankAcctSubGl"></field>
+        <!--(183) 清算行账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/clrBankAcctNo"></field>
+        <!--(184) 付款银行编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/pymtBankNo"></field>
+        <!--(185) 他行扣款金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/theirDedctCcy"></field>
+        <!--(186) 他行扣款金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/theirDedctAmt"></field>
+        <!--(187) Remarks-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/rmrk"></field>
+        <!--(188) 手续费支付方-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/feePayer"></field>
+        <!--(189) 手续费账户^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/feeAcctCcy"></field>
+        <!--(190) 手续费账户^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/feeAcctGl"></field>
+        <!--(191) 手续费账户^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/feeAcctSubGl"></field>
+        <!--(192) 手续费账户^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/feeAcctNo"></field>
+        <!--(193) N/W区分-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/noWfDist"></field>
+        <!--(194) 入两个账户-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/enter2AcctFlg"></field>
+        <!--(195) 入账备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookRmrk"></field>
+        <!--(196) 对手方银行国别^国家-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/counterPartyCountry"></field>
+        <!--(197) 对手方银行国别^省-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/counterPartyProv"></field>
+        <!--(198) 对手方银行国别^市-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/counterPartyCity"></field>
+        <!--(199) 入账账户#1^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctCcy1"></field>
+        <!--(200) 入账账户#1^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctGl1"></field>
+        <!--(201) 入账账户#1^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctSubGl1"></field>
+        <!--(202) 入账账户#1^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctNo1"></field>
+        <!--(203) 金额#1^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/ccy1"></field>
+        <!--(204) 金额#1^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/amt1"></field>
+        <!--(205) 定价金额#1^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/prcCcy1"></field>
+        <!--(206) 定价金额#1^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/prcAmt1"></field>
+        <!--(207) Exchange信息#1^EX.Method-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/exMethod1"></field>
+        <!--(208) Exchange信息#1^Quote-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/quote1"></field>
+        <!--(209) Exchange信息#1^Cont.No.^No.1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/contNo11"></field>
+        <!--(210) Exchange信息#1^Cont.No.^No.2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/contNo12"></field>
+        <!--(211) Exchange信息#1^Rate-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/rate1"></field>
+        <!--(212) Exchange信息#1^M/D-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/md1"></field>
+        <!--(213) Exchange信息#1^E/C-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/ecRate1"></field>
+        <!--(214) 入账金额#1^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookCcy1"></field>
+        <!--(215) 入账金额#1^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAmt1"></field>
+        <!--(216) 账户性质#1^二级分类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/acctPropty2nd1"></field>
+        <!--(217) 账户性质#1^三级分类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/acctPropty3rd1"></field>
+        <!--(218) 入账账户#2^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctCcy2"></field>
+        <!--(219) 入账账户#2^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctGl2"></field>
+        <!--(220) 入账账户#2^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctSubGl2"></field>
+        <!--(221) 入账账户#2^账号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAcctNo2"></field>
+        <!--(222) 金额#2^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/ccy2"></field>
+        <!--(223) 金额#2^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/amt2"></field>
+        <!--(224) 定价金额#2^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/prcCcy2"></field>
+        <!--(225) 定价金额#2^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/prcAmt2"></field>
+        <!--(226) Exchange信息#2^EX.Method-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/exMethod2"></field>
+        <!--(227) Exchange信息#2^Quote-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/quote2"></field>
+        <!--(228) Exchange信息#2^Cont.No.^No.1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/contNo21"></field>
+        <!--(229) Exchange信息#2^Cont.No.^No.2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/contNo22"></field>
+        <!--(230) Exchange信息#2^Rate-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/rate2"></field>
+        <!--(231) Exchange信息#2^M/D-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/md2"></field>
+        <!--(232) Exchange信息#2^E/C-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/ecRate2"></field>
+        <!--(233) 入账金额#2^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookCcy2"></field>
+        <!--(234) 入账金额#2^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/bookAmt2"></field>
+        <!--(235) 账户性质#2^二级分类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/acctPropty2nd2"></field>
+        <!--(236) 账户性质#2^三级分类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcBookOpDtlVO/acctPropty3rd2"></field>
+        <!--(237) 快递类型-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/exprsType"></field>
+        <!--(238) 寄单对象-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/dispchDocObj"></field>
+        <!--(239) 寄单种类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/dispchDocType"></field>
+        <!--(240) 快递号码-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/exprsNo"></field>
+        <!--(241) 收件人-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/recpnt"></field>
+        <!--(242) 快递寄单日-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/exprsDispchDocDate"></field>
+        <!--(243) 备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/dispchDocRmrk"></field>
+        <!--(244) 操作节点-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/operNod"></field>
+        <!--(245) 业务种类-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/dispchDocInfoVOList[*]/bizType"></field>
+        <!--(246) 寄单行行号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/smileDispchDocBankCode"></field>
+        <!--(247) 空值-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/smileKeepword2"></field>
+        <!--(248) Charges^code1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCode1"></field>
+        <!--(249) Charges^ccy1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCcy1"></field>
+        <!--(250) Charges^Amount1-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgAmt1"></field>
+        <!--(251) Charges^code2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCode2"></field>
+        <!--(252) Charges^ccy2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCcy2"></field>
+        <!--(253) Charges^Amount2-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgAmt2"></field>
+        <!--(254) Charges^code3-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCode3"></field>
+        <!--(255) Charges^ccy3-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCcy3"></field>
+        <!--(256) Charges^Amount3-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgAmt3"></field>
+        <!--(257) Charges^code4-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCode4"></field>
+        <!--(258) Charges^ccy4-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCcy4"></field>
+        <!--(259) Charges^Amount4-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgAmt4"></field>
+        <!--(260) Charges^code5-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCode5"></field>
+        <!--(261) Charges^ccy5-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgCcy5"></field>
+        <!--(262) Charges^Amount5-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/chgAmt5"></field>
+        <!--(263) 改单前受益人CIF-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfBeneCustNo"></field>
+        <!--(264) 改单前BC记账科目^GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfBcBookAcctSubjGl"></field>
+        <!--(265) 改单前BC记账科目^SUB GL-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfBcBookAcctSubjSubGl"></field>
+        <!--(266) 改单前交易主参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfTxnPrmryRefNo"></field>
+        <!--(267) 改单前交易子参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfTxnSubRefNo"></field>
+        <!--(268) 改单前汇票金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfBxCcy"></field>
+        <!--(269) 改单前汇票金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/modDocBfBxAmt"></field>
+        <!--(270) EX.Method-->
+        <field readOnly="true" doubleCheck="false" name="data/BcMntnOpDtlVO/exMethod"></field>
+
+		<!-- XmlGenerator生成区域3 - 结束-->
+	</fields>
+	
+	<unvisibles>
+		<!-- XmlGenerator生成区域4 - 开始-->
+		
+        <unvisible>SMILE记账</unvisible>
+        <unvisible>入账</unvisible>
+        <unvisible>artcommonFaxBtn</unvisible>
+
+		<!-- XmlGenerator生成区域4 - 结束-->
+	</unvisibles>
+</logicPage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd	
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd	
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<bean id="BATCH_603-823-001"
+		class="cn.com.btmu.art.biz.collection.batch.Batch603823001Job">
+		<property name="jobId" value="BATCH_603-823-001" />
+		<property name="jobName" value="发送托收的索偿部门消息" />
+	</bean>
+</beans>

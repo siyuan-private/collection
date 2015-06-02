@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="detailDispatchAction" name="Collection/CollCreate/detail" templateBean="detailService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.CollectionCollCreateHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.collection.context.CollectionCollCreateDetailContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BcMntnOpDtlVO" key="BcMntnOpDtlVO">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollCreateDataBuilder"></databuilder>
+        </input>
+        <output>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionCollCreateForCollCreateDataBuilder"></databuilder>
+        </output>
+    </vo>
+    <result name="v_detail_new" page="823002001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_inquiry_before" page="823002002">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_checker" page="823002003">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_approver" page="823002004">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_submit_success" page="823002001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_check_through" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_approval_through" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_save" page="823002002">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_cancel" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_reject" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_detail_close" page="101000001">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_afterwards_adjust_inquiry_before" page="823002002">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+    <result name="v_afterwards_modify_inquiry_before" page="823002002">
+        <vo key="BcMntnOpDtlVO"></vo>
+    </result>
+</actionCategory>

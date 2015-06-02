@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logicPage>
+	<!-- XmlGenerator生成区域1 - 开始 -->
+	
+    <!--逻辑画面编号-->
+    <logicId>823004002</logicId>
+    <!--物理画面的URL,请用户修改-->
+    <url>page/collection/billOfCollectionNoticeprintDetail823004.jsp</url>
+    <!--记账-->
+    <bookAccount value="false"></bookAccount>
+    <!--操作履历-->
+    <controlRecord value="true"></controlRecord>
+    <!--交易附言-->
+    <dealPostscript value="true"></dealPostscript>
+    <!--只读详情-->
+    <detailReadonly value="false"></detailReadonly>
+    <!--手续费区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <feeControl flag="3"></feeControl>
+    <!--未完区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <pendingControl flag="3"></pendingControl>
+    <!--贷款支付区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <loanPaymentControl flag="3"></loanPaymentControl>
+    <!--ONP区块控制标志，1:可编辑选中，2：可编辑不选中，3，不可编辑，如果完全没有引入该区块，就设为3-->
+    <onpControl flag="3"></onpControl>
+
+	<!-- XmlGenerator生成区域1 - 结束 -->
+	
+	<buttons>
+		<!-- XmlGenerator生成区域2 - 开始 -->
+		
+        <!--保存提交-->
+        <button>submit</button>
+
+		<!-- XmlGenerator生成区域2 - 结束 -->
+	</buttons>
+	
+	<!-- 逻辑画面的字段属性配置 
+		readOnly:		是否禁止编辑:	选项true/false:默认true
+		doubleCheck:	是否双检测:		选项true/false:默认false
+		visible:		是否显示:		选项true/false:默认true  
+	-->
+	<fields>
+		<!-- XmlGenerator生成区域3 - 开始-->
+		
+        <!--(1) 种类-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/type"></field>
+        <!--(2) 转让编号^T-kind-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/trasfTKind"></field>
+        <!--(3) 转让编号^主参号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/trasfNoPrmryRefNo"></field>
+        <!--(4) 转让编号^转让号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/trasfNoSubRefNo"></field>
+        <!--(5) 登记日-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/regDate"></field>
+        <!--(6) 结算方式^信用证-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/lcStlmtMeth"></field>
+        <!--(7) 结算方式^保函-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/lgStlmtMeth"></field>
+        <!--(8) 结算方式^托收-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/collStlmtMeth"></field>
+        <!--(9) 结算方式^其他-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherStlmtMeth"></field>
+        <!--(10) 信用证编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/lcNo"></field>
+        <!--(11) 来单金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/docRecvdCcy"></field>
+        <!--(12) 来单金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/docRecvdAmt"></field>
+        <!--(13) 开证日期-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/issueDate"></field>
+        <!--(14) 索汇金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/clmExchgAmtCcy"></field>
+        <!--(15) 索汇金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/clmExchgAmt"></field>
+        <!--(16) 期限-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/term"></field>
+        <!--(17) 到期日-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/dueDate"></field>
+        <!--(18) 来单行名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/docRecvdBankName"></field>
+        <!--(19) 来单行编号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/docRecvdBankNo"></field>
+        <!--(20) 来单行邮件号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/docRecvdBankMailNo"></field>
+        <!--(21) 收款人名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/payeeName"></field>
+        <!--(22) 收款行名称及地址-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/recvgBankNameAndAddr"></field>
+        <!--(23) 付款人名称-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/payerName"></field>
+        <!--(24) 对公-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/toPubFlg"></field>
+        <!--(25) 组织机构代码^代码1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/orgCode1"></field>
+        <!--(26) 组织机构代码^代码2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/orgCode2"></field>
+        <!--(27) 对私-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/toPrivtFlg"></field>
+        <!--(28) 个人身份证-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/personalId"></field>
+        <!--(29) 中国居民个人-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/cnResdnt"></field>
+        <!--(30) 提运单/货运单据号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/delvrFrtDocNo"></field>
+        <!--(31) 合同号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/contrNo"></field>
+        <!--(32) 发票号-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/ivcNo"></field>
+        <!--(33) 扣费金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/chgCcy"></field>
+        <!--(34) 扣费金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/chgAmt"></field>
+        <!--(35) 合同金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/contrCcy"></field>
+        <!--(36) 合同金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/contrAmt"></field>
+        <!--(37) Shipped On-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/shippedOn"></field>
+        <!--(38) Shipped From-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/shippedFrom"></field>
+        <!--(39) Shipped To-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/shippedTo"></field>
+        <!--(40) 所附单据^Other1（title）-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherName1"></field>
+        <!--(41) 所附单据^Other2（title）-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherName2"></field>
+        <!--(42) 所附单据^Other3（title）-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherName3"></field>
+        <!--(43) 所附单据^Detail信息#1^Draft-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/draft1st"></field>
+        <!--(44) 所附单据^Detail信息#1^Inv.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inv1st"></field>
+        <!--(45) 所附单据^Detail信息#1^B/L,AWB,C/R1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/blAwbCr11"></field>
+        <!--(46) 所附单据^Detail信息#1^B/L,AWB,C/R2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/blAwbCr21"></field>
+        <!--(47) 所附单据^Detail信息#1^Ins.Pol./Cert.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inspolCert1st"></field>
+        <!--(48) 所附单据^Detail信息#1^P/L-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/pl1st"></field>
+        <!--(49) 所附单据^Detail信息#1^Origin-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/origin1st"></field>
+        <!--(50) 所附单据^Detail信息#1^Quality-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/quality1st"></field>
+        <!--(51) 所附单据^Detail信息#1^Quantity-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/quantity1st"></field>
+        <!--(52) 所附单据^Detail信息#1^Non-wood-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/nonWood1st"></field>
+        <!--(53) 所附单据^Detail信息#1^Inspect-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inspect1st"></field>
+        <!--(54) 所附单据^Detail信息#1^Cert.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/cert1st"></field>
+        <!--(55) 所附单据^Detail信息#1^Other1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue11st"></field>
+        <!--(56) 所附单据^Detail信息#1^Other2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue21st"></field>
+        <!--(57) 所附单据^Detail信息#1^Other3-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue31st"></field>
+        <!--(58) 所附单据^Detail信息#2^Draft-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/draft2nd"></field>
+        <!--(59) 所附单据^Detail信息#2^Inv.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inv2nd"></field>
+        <!--(60) 所附单据^Detail信息#2^B/L,AWB,C/R1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/blAwbCr12"></field>
+        <!--(61) 所附单据^Detail信息#2^B/L,AWB,C/R2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/blAwbCr22"></field>
+        <!--(62) 所附单据^Detail信息#2^Ins.Pol./Cert.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inspolCert2nd"></field>
+        <!--(63) 所附单据^Detail信息#2^P/L-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/pl2nd"></field>
+        <!--(64) 所附单据^Detail信息#2^Origin-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/origin2nd"></field>
+        <!--(65) 所附单据^Detail信息#2^Quality-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/quality2nd"></field>
+        <!--(66) 所附单据^Detail信息#2^Quantity-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/quantity2nd"></field>
+        <!--(67) 所附单据^Detail信息#2^Non-wood-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/nonWood2nd"></field>
+        <!--(68) 所附单据^Detail信息#2^Inspect-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/inspect2nd"></field>
+        <!--(69) 所附单据^Detail信息#2^Cert.-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/cert2nd"></field>
+        <!--(70) 所附单据^Detail信息#2^Other1-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue12nd"></field>
+        <!--(71) 所附单据^Detail信息#2^Other2-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue22nd"></field>
+        <!--(72) 所附单据^Detail信息#2^Other3-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/otherValue32nd"></field>
+        <!--(73) Remarks备注-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/remarksRmrk"></field>
+        <!--(74) 不符点^Late Shipment 晚装船-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/lateShipmentFlg"></field>
+        <!--(75) 不符点^Late Presentation 晚交单-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/latePresentationFlg"></field>
+        <!--(76) 不符点^L/C Expired 信用证过有效期-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/lcOverdueFlg"></field>
+        <!--(77) 不符点^Overdrawn by 超金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/overdrawnFlg"></field>
+        <!--(78) 不符点^超金额^币种-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/overdrawnAmtCcy"></field>
+        <!--(79) 不符点^超金额^金额-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/overdrawnAmt"></field>
+        <!--(80) 不符点^Additional Discrepancies 其他-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/addDiscOther"></field>
+        <!--(81) 不符点^其它-->
+        <field readOnly="true" doubleCheck="false" name="data/BbNoticeLettInfoVO/other"></field>
+
+		<!-- XmlGenerator生成区域3 - 结束-->
+	</fields>
+	
+	<unvisibles>
+		<!-- XmlGenerator生成区域4 - 开始-->
+		<unvisible>artcommonFaxBtn</unvisible>
+
+		<!-- XmlGenerator生成区域4 - 结束-->
+	</unvisibles>
+	<validatorConfig>
+
+	<!-- 预采号 -->
+	<button id="preSeqGenerate">
+	</button>
+
+	<!-- 采号 -->
+	<button id="seqGenerate">
+	</button>
+
+	<!-- 暂存 -->
+	<button id="save">
+	</button>
+
+	<!-- 保存提交 -->
+	<button id="submit">
+	</button>
+
+	<!-- 复核 -->
+	<button id="check">
+	</button>
+
+	<!-- 承认 -->
+	<button id="approval">
+	</button>
+
+	<!-- 驳回 -->
+	<button id="reject">
+	</button>
+
+	<!-- 记账校验 -->
+	<button id="accountValidate">
+	</button>
+
+	<!-- 取消 -->
+	<button id="cancel">
+	</button>
+
+	</validatorConfig>
+
+</logicPage>

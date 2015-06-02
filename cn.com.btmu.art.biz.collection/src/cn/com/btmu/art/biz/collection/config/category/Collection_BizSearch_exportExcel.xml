@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actionCategory actionBean="summaryDispatchAction" name="Collection/BizSearch/exportExcel" templateBean="fileUploadService" xmlns="http://www.example.org/configSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/configSchema">
+    <handler class="cn.com.btmu.art.biz.collection.handler.CollectionExportBizHandler"></handler>
+    <datacontext class="cn.com.btmu.art.biz.common01biz.base.context.ComQueryContext"></datacontext>
+    <vo class="cn.com.btmu.art.biz.collection.vo.BillOfCollectionQueryVO" key="exportQueryInfo">
+        <input>
+            <databuilder class="cn.com.btmu.art.biz.collection.databuilder.CollectionQueryByBizDataBuilder"></databuilder>
+        </input>
+    </vo>
+</actionCategory>
